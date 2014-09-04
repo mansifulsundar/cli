@@ -41,7 +41,7 @@ func (cmd ListAppsForService) GetRequirements(requirementsFactory requirements.F
 }
 
 func (cmd ListAppsForService) Run(c *cli.Context) {
-        cmd.ui.Say(T("Getting services in org {{.OrgName}} / space {{.SpaceName}} as {{.CurrentUser}}...",
+        cmd.ui.Say(T("Getting apps in org {{.OrgName}} / space {{.SpaceName}} as {{.CurrentUser}}...",
                 map[string]interface{}{
                         "OrgName":     terminal.EntityNameColor(cmd.config.OrganizationFields().Name),
                         "SpaceName":   terminal.EntityNameColor(cmd.config.SpaceFields().Name),
